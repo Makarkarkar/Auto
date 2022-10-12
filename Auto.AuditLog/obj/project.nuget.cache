@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "PaCc7/mJE1UoGTFA+xIBYpa/tygzbuNAhsqvGHUgXfhfjXPVJqfbIMOS/PcQCz7Xz2sf+HWYRuPJNbGCWTcpZA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ivvm3\\RiderProjects\\Auto\\Auto.AuditLog\\Auto.AuditLog.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ivvm3\\.nuget\\packages\\easynetq\\7.2.1\\easynetq.7.2.1.nupkg.sha512",
+    "C:\\Users\\ivvm3\\.nuget\\packages\\rabbitmq.client\\6.4.0\\rabbitmq.client.6.4.0.nupkg.sha512",
+    "C:\\Users\\ivvm3\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\ivvm3\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}
