@@ -1,0 +1,2 @@
+obj\Debug\net6.0\Protos/FindVehicle.cs \
+obj\Debug\net6.0\Protos/FindVehicleGrpc.cs: Protos/findVehicle.proto

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "vRssJsPAznuzthYD44kIVNZkfm6MTdF7AV+CyP1CMY0=",
+  "Source": "Auto.AuditLog",
+  "BasePath": "_content/Auto.AuditLog",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
