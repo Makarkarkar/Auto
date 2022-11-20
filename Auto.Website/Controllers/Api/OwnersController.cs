@@ -9,9 +9,7 @@ using Auto.Website.Models;
 using EasyNetQ;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Auto.Website.Controllers.Api
-{
-
+namespace Auto.Website.Controllers.Api {
     [Route("api/[controller]")]
     [ApiController]
     public class OwnersController: ControllerBase
@@ -19,7 +17,7 @@ namespace Auto.Website.Controllers.Api
         private readonly IAutoDatabase db;
         private readonly IBus bus;
         
-        public OwnersController(IAutoDatabase db)
+        public OwnersController(IAutoDatabase db, IBus bus)
         {
             this.db = db;
             this.bus = bus;
@@ -93,16 +91,16 @@ namespace Auto.Website.Controllers.Api
                 OwnerVehicle = ownerVehicle
             };
             db.CreateOwner(owner);
-			
+            PublishNewOwnerMessage(owner);
             return Ok(dto);
         }
         
         private void PublishNewOwnerMessage(Owner owner) {
-            var message = new NewOwnerMessage() {
+            var message = new NewOwnerMessage {
                 Name = owner.Name,
                 Surname = owner.Surname,
                 Age = owner.Age,
-                VehicleRegistration = owner.OwnerVehicle.Registration,
+                VehicleRegistration = owner.OwnerVehicle?.Registration,
                 Email = owner.Email,
                 ListedAtUtc = DateTime.UtcNow
             };

@@ -10,12 +10,9 @@ using System.Reflection;
 using Auto.Website.GraphQL.GraphTypes;
 using Auto.Website.GraphQL.Schemas;
 using EasyNetQ;
-using GraphQL.Types;
-using GraphiQl;
 using GraphQL;
 using Microsoft.OpenApi.Models;
-using GraphQL.Server;
-using GraphQL.MicrosoftDI;
+
 
 namespace Auto.Website {
     public class Startup {
@@ -27,16 +24,11 @@ namespace Auto.Website {
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
-            services.AddControllers().AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            // services.AddControllers().AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddRouting(options => options.LowercaseUrls = true);
             services.AddControllersWithViews().AddNewtonsoftJson();
 
             services.AddSingleton<IAutoDatabase, AutoCsvFileDatabase>();
-
-            // services.AddScoped<ISchema, AutoSchema>();
-            // services.AddScoped<ISchema, OwnerSchema>();
-            // services.AddGraphQL(options => { options.EnableMetrics = true; }).AddSystemTextJson();
-            //
             
             services.AddSwaggerGen(
                 config => {
@@ -55,8 +47,10 @@ namespace Auto.Website {
                 .AddSchema<OwnerSchema>()
                 .AddGraphTypes(typeof(VehicleGraphType).Assembly)
             );
-            
+            var bus = RabbitHutch.CreateBus(Configuration.GetConnectionString("AutoRabbitMQ"));
+            services.AddSingleton<IBus>(bus);
         }
+        
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
             if (env.IsDevelopment()) {
@@ -75,7 +69,6 @@ namespace Auto.Website {
 
             app.UseGraphQL<OwnerSchema>();
             app.UseGraphQL<AutoSchema>();
-            
 
             app.UseEndpoints(endpoints => {
                 endpoints.MapControllerRoute(

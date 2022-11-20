@@ -42,11 +42,11 @@
           "dependencies": {
             "EasyNetQ": {
               "target": "Package",
-              "version": "[7.2.1, )"
+              "version": "[8.0.0-alpha5, )"
             },
             "EasyNetQ.Serialization.NewtonsoftJson": {
               "target": "Package",
-              "version": "[7.2.1, )"
+              "version": "[8.0.0-alpha5, )"
             },
             "GraphQL": {
               "target": "Package",
@@ -89,6 +89,22 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.10, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0-rc.2.22472.3, )"
+            },
+            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Microsoft.Extensions.Logging.Console": {
               "target": "Package",

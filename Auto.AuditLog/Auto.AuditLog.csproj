@@ -7,11 +7,22 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="EasyNetQ" Version="7.2.1" />
+      <PackageReference Include="EasyNetQ" Version="8.0.0-alpha5" />
+      <PackageReference Include="EasyNetQ.Serialization.NewtonsoftJson" Version="8.0.0-alpha5" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0-rc.2.22472.3" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="7.0.0-rc.2.22472.3" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Auto.Messages\Auto.Messages.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>

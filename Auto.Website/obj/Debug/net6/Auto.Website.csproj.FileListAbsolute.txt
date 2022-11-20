@@ -82,3 +82,9 @@ C:\Users\ivvm3\RiderProjects\Auto\Auto.Website\bin\Debug\net6\RabbitMQ.Client.dl
 C:\Users\ivvm3\RiderProjects\Auto\Auto.Website\bin\Debug\net6\EasyNetQ.Serialization.NewtonsoftJson.dll
 C:\Users\ivvm3\RiderProjects\Auto\Auto.Website\bin\Debug\net6\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\ivvm3\RiderProjects\Auto\Auto.Website\bin\Debug\net6\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\ivvm3\RiderProjects\Auto\Auto.Website\bin\Debug\net6\Auto.Messages.dll
+C:\Users\ivvm3\RiderProjects\Auto\Auto.Website\bin\Debug\net6\Auto.Messages.pdb
+C:\Users\ivvm3\RiderProjects\Auto\Auto.Website\bin\Debug\net6\Microsoft.Extensions.Configuration.dll
+C:\Users\ivvm3\RiderProjects\Auto\Auto.Website\bin\Debug\net6\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\ivvm3\RiderProjects\Auto\Auto.Website\bin\Debug\net6\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\ivvm3\RiderProjects\Auto\Auto.Website\bin\Debug\net6\Microsoft.Extensions.Primitives.dll

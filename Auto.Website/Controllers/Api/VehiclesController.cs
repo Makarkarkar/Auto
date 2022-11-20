@@ -15,9 +15,11 @@ namespace Auto.Website.Controllers.Api {
     [Route("api/[controller]")]
 	[ApiController]
 	public class VehiclesController : ControllerBase {
+		
 		private readonly IAutoDatabase db;
 		private readonly IBus bus;
-		public VehiclesController(IAutoDatabase db) {
+		
+		public VehiclesController(IAutoDatabase db, IBus bus) {
 			this.db = db;
 			this.bus = bus;
 		}
@@ -93,12 +95,12 @@ namespace Auto.Website.Controllers.Api {
 				VehicleModel = vehicleModel
 			};
 			db.CreateVehicle(vehicle);
-			
+			PublishNewVehicleMessage(vehicle);
 			return Ok(dto);
 		}
 
 		private void PublishNewVehicleMessage(Vehicle vehicle) {
-			var message = new NewVehicleMessage() {
+			var message = new NewVehicleMessage {
 				Registration = vehicle.Registration,
 				Manufacturer = vehicle.VehicleModel?.Manufacturer?.Name,
 				ModelName = vehicle.VehicleModel?.Name,
