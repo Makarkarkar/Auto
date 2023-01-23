@@ -9,10 +9,10 @@ using System.IO;
 using System.Reflection;
 using Auto.Website.GraphQL.GraphTypes;
 using Auto.Website.GraphQL.Schemas;
+using Auto.Website.Hubs;
 using EasyNetQ;
 using GraphQL;
 using Microsoft.OpenApi.Models;
-
 
 namespace Auto.Website {
     public class Startup {
@@ -21,15 +21,15 @@ namespace Auto.Website {
             Configuration = configuration;
         }
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
+        
         public void ConfigureServices(IServiceCollection services) {
             // services.AddControllers().AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddRouting(options => options.LowercaseUrls = true);
             services.AddControllersWithViews().AddNewtonsoftJson();
 
             services.AddSingleton<IAutoDatabase, AutoCsvFileDatabase>();
-            
+            services.AddSignalR();
+
             services.AddSwaggerGen(
                 config => {
                     config.SwaggerDoc("v1", new OpenApiInfo() {
@@ -70,10 +70,14 @@ namespace Auto.Website {
             app.UseGraphQL<OwnerSchema>();
             app.UseGraphQL<AutoSchema>();
 
+            
+            
             app.UseEndpoints(endpoints => {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                //endpoints.MapHub<AutoHub>("/hub");
+                
             });
         }
     }

@@ -30,3 +30,4 @@ C:\Users\ivvm3\RiderProjects\Auto\Auto.AuditLog\bin\Debug\net6.0\Microsoft.Exten
 C:\Users\ivvm3\RiderProjects\Auto\Auto.AuditLog\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 C:\Users\ivvm3\RiderProjects\Auto\Auto.AuditLog\bin\Debug\net6.0\EasyNetQ.Serialization.NewtonsoftJson.dll
 C:\Users\ivvm3\RiderProjects\Auto\Auto.AuditLog\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\ivvm3\RiderProjects\Auto\Auto.AuditLog\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll

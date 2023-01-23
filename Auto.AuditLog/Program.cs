@@ -34,7 +34,7 @@ namespace Auto.AuditLog
         private static void HandleNewOwnerMessage(NewOwnerMessage message)
         {
             var csv =
-                $"{message.Name},{message.Surname},{message.Email},{message.VehicleRegistration},{message.Age},{message.ListedAtUtc:0}";
+                $"{message.Name},{message.Surname},{message.Email},{message.VehicleRegistration},{message.Age}";
             Console.WriteLine(csv);
             
         }

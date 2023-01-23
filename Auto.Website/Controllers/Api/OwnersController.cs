@@ -102,7 +102,7 @@ namespace Auto.Website.Controllers.Api {
                 Age = owner.Age,
                 VehicleRegistration = owner.OwnerVehicle?.Registration,
                 Email = owner.Email,
-                ListedAtUtc = DateTime.UtcNow
+                
             };
             bus.PubSub.Publish(message);
         }

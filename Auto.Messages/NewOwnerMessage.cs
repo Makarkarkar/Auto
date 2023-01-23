@@ -7,5 +7,5 @@ public class NewOwnerMessage
     public string Email { get; set; }
     public int Age { get; set; }
     public string VehicleRegistration { get; set; }
-    public DateTime ListedAtUtc { get; set; }
+    
 }

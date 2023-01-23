@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "u4viTcjfN/2D0qufF2ISTJ4glO4i6sywUDnq7tJoJ10=",
+  "Source": "Auto.FindOwnerVehicleServer",
+  "BasePath": "_content/Auto.FindOwnerVehicleServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

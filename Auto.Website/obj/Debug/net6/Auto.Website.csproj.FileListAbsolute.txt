@@ -88,3 +88,4 @@ C:\Users\ivvm3\RiderProjects\Auto\Auto.Website\bin\Debug\net6\Microsoft.Extensio
 C:\Users\ivvm3\RiderProjects\Auto\Auto.Website\bin\Debug\net6\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\ivvm3\RiderProjects\Auto\Auto.Website\bin\Debug\net6\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
 C:\Users\ivvm3\RiderProjects\Auto\Auto.Website\bin\Debug\net6\Microsoft.Extensions.Primitives.dll
+C:\Users\ivvm3\RiderProjects\Auto\Auto.Website\bin\Debug\net6\System.Net.WebSockets.WebSocketProtocol.dll

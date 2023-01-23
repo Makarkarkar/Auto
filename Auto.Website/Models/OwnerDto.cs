@@ -10,6 +10,6 @@ public class OwnerDto
     public string Email { get; set; }
     [Range(18,100)]
     public int Age { get; set; }
-    
+    [Required]
     public string VehicleRegistration { get; set; }
 }
